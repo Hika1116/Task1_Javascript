@@ -15,13 +15,20 @@
 
     <!-- 入力エリア -->
     <div class="input_area">
-      FlzzNum:<input type="text" id="num_fizz"><br>
+      FizzNum:<input type="text" id="num_fizz"><br>
       BuzzNum:<input type="text" id="num_buzz"><br>
-      <button type="button" onclick="onButtonClick()">実行</button>
+      <button id="button" type="button">実行</button>
     </div>
 
     <!-- 結果表示エリア -->
     <div id="result"></div>
 
+    <script>
+      window.onload = () => {
+        let button = document.getElementById("button");
+        button.addEventListener('click', onButtonClick, false);
+        console.log('onload');
+      }
+    </script>
   </body>
 </html>
